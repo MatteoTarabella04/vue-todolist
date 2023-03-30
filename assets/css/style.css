@@ -1,13 +1,17 @@
-body{
+body {
    font-family: sans-serif;
 }
 
-header{
+header {
    height: 50px;
 }
 
 main {
    height: calc(100vh - 98px);
+}
+
+li {
+   cursor: pointer;
 }
 
 .card-body {
