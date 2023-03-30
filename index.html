@@ -22,22 +22,21 @@
    <body>
 
       <div id="app">
-         <header id="site_header" class="text-bg-light shadow text-center mb-5">
+         <header id="site_header" class="text-bg-light text-center bg-primary text-white">
             <h1>
-               Vue ToDo List
+               Vue ToDo List 🚩
             </h1>
          </header>
          <!-- /#site_header -->
 
-         <main id="site_main">
-            <div class="container">
+         <main id="site_main" class="bg-dark">
+            <div class="container py-5">
 
                <div class="add_task d-flex justify-content-center">
                   <input
                      type="text" v-model.trim="newTask"
-                     @keyup.enter="addTask()" class="form-control m-3 w-25">
-                  <button @click="addTask()" class="btn border btn-primary
-                     my-3">Add
+                     @keyup.enter="addTask()" class="form-control w-25 mb-2">
+                  <button @click="addTask()" class="btn btn-primary mb-2 mx-2">Add
                   </button>
                </div>
 
