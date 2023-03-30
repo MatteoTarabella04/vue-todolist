@@ -51,7 +51,11 @@ createApp({
          console.log('added');
          console.log(this.newTask);
 
-         this.todo.push({ text: this.newTask, done: false });
+         this.todo.push(
+            { text: this.newTask.charAt(0).toUpperCase() + this.newTask.slice(1),
+               done: false 
+            }
+         );
          this.newTask = '';
 
       },
