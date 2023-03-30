@@ -5,3 +5,12 @@ body{
 header{
    height: 50px;
 }
+
+main {
+   height: calc(100vh - 98px);
+}
+
+.card-body {
+   max-height: 650px;
+   overflow-y: auto;
+}
