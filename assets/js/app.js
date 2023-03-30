@@ -61,7 +61,7 @@ createApp({
 
       },
       done(i) {
-         this.todo[i].done = true;
+         this.todo[i].done = !this.todo[i].done;
          console.log(this.todo[i].done);
       }
    }
