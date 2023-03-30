@@ -25,6 +25,39 @@ const { createApp } = Vue
 createApp({
    data() {
       return {
+         newTask: '',
+         todo: [
+            {
+               text: 'Learn HTML',
+               done: false,
+            },
+            {
+               text: 'Learn CSS',
+               done: false,
+            },
+            {
+               text: 'Learn JS',
+               done: false,
+            },
+            {
+               text: 'Learn PHP',
+               done: false,
+            },
+         ]
+      }
+   },
+   methods: {
+      addTask() {
+         console.log('added');
+         console.log(this.newTask);
+
+         this.todo.push({ text: this.newTask, done: false });
+         this.newTask = '';
+
+      },
+      done(i) {
+         this.todo[i].done = true;
+         console.log(this.todo[i].done);
       }
    }
 }).mount('#app');
