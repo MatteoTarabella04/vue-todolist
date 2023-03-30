@@ -26,6 +26,7 @@ createApp({
    data() {
       return {
          newTask: '',
+         error: null,
          todo: [
             {
                text: 'Learn HTML',
@@ -51,13 +52,19 @@ createApp({
          console.log('added');
          console.log(this.newTask);
 
-         this.todo.unshift(
-            { 
-               text: this.newTask.charAt(0).toUpperCase() + this.newTask.slice(1),
-               done: false 
-            }
-         );
-         this.newTask = '';
+         if (this.newTask.length = null) {
+            
+            this.todo.unshift(
+               { 
+                  text: this.newTask.charAt(0).toUpperCase() + this.newTask.slice(1),
+                  done: false 
+               }
+            );
+            this.newTask = '';
+         } else {
+            this.error = 'ATTENZIONE! Nessuna task inserita'
+         }
+
 
       },
       done(i) {
