@@ -48,10 +48,12 @@
                      </div>
                      <div class="card-body">
                         <ul class="list-unstyled">
-                           <li class="d-flex gap-2 py-2" :class="{'text-decoration-line-through': task.done}" v-for="(task, i) in todo" >
-                              <div class="done"
+                           <li  @click="done(i)" class="d-flex gap-2 py-2" :class="{'text-decoration-line-through': task.done}" v-for="(task, i) in todo" >
+                              <div id="done"
                                  @click="done(i)">
-                                 <i class="fa fa-check-circle"
+                                 <i v-if="task.done == false" class="fa fa-circle text-primary"
+                                    aria-hidden="true"></i>
+                                 <i v-else class="fa fa-check-circle text-primary"
                                     aria-hidden="true"></i>
                               </div>
                               {{task.text}}
