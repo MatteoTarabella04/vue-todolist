@@ -52,7 +52,7 @@ createApp({
          console.log('added');
          console.log(this.newTask);
 
-         if (this.newTask.length = null) {
+         if (this.newTask.length > 0) {
             
             this.todo.unshift(
                { 
@@ -61,6 +61,7 @@ createApp({
                }
             );
             this.newTask = '';
+            this.error = null;
          } else {
             this.error = 'ATTENZIONE! Nessuna task inserita'
          }
